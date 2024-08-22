@@ -13,3 +13,6 @@ body, html {
     width: 100%;
 }
 
+#nameContainer, #buttonContainer {
+    text-shadow: 1px 1px #fff;
+}
