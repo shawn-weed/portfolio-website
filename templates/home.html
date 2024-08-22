@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="{{url_for('static', filename='./css/index.css')}}" />
     </head>
     <body>
-      <div id='bg' class='container min-vh-100 min-vw-100 d-flex align-items-center' >
-            <h1 id='dev' class='z-n1 position-absolute m-4 text-light display-1 overflow-hidden'>
+      <div id='bg' class='container d-flex align-items-center' >
+            <h1 id='dev' class='z-n1 max-vw-100 position-absolute m-4 text-light display-1 overflow-hidden'>
                 from flask import Flask, render_template
 
                 app = Flask(__name__)
@@ -30,9 +30,9 @@
                 <h1 class='text-center'>Shawn Weed</h1>
               </div>
               <div class='d-flex w-50 justify-content-between align-items-end'>
-                <button id='dv' type='button' onclick='developer()' class='border-0 bg-transparent fs-3 text-decoration-none'>Developer</button>
+                <button id='dv' type='button' onclick='developer()' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Developer</button>
                 <h3 class='ml-2 mr-2'> | </h3> 
-                <button id='create' type='button' onclick = 'creative()' class='border-0 bg-transparent fs-3 text-decoration-none'>Creative</button>
+                <button id='create' type='button' onclick = 'creative()' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Creative</button>
               </div>
         </div>
       </div>

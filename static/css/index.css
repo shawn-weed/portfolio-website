@@ -7,3 +7,9 @@ button:hover {
     font-style: italic;
 }
 
+body, html {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
