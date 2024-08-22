@@ -7,8 +7,9 @@ button:hover {
     font-style: italic;
 }
 
-body, html {
+#homeBody, #homeHtml {
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
     width: 100%;
 }
