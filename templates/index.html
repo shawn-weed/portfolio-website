@@ -26,17 +26,19 @@
             </div>
             
         <div id='mainContainer' class='container d-flex min-vh-100 align-items-center shadow-lg rounded'>
+        {% block content %}
           <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-n1'/>
           <div id='textContainer' class='container d-md-flex align-items-end mw-50'>
             <div id='nameContainer' class='container d-flex justify-content-center'>
               <span class='display-4'>Shawn Weed</span>
             </div>
             <div id='buttonContainer' class='container d-flex justify-content-between align-items-end'>
-              <button id='dv' type='button' onclick='developer()' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Developer</button>
+              <a id='dv' href='/developer'  class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Developer</a>
               <h3 class='ml-2 mr-2'> | </h3> 
-              <button id='create' type='button' onclick = 'creative()' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Creative</button>
+              <a id='create' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Creative</a>
             </div>
           </div>
+        {% endblock %}
         </div>
       </div>
       {% include 'footer.html'%}

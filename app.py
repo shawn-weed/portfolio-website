@@ -1,11 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
+from views import views
 
 app = Flask(__name__)
-
-@app.route("/")
-def main():
-    return render_template('home.html')
-
+app.register_blueprint(views, url_prefix='/')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000, debug=True)

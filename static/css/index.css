@@ -9,7 +9,6 @@ button:hover {
 
 #homeBody, #homeHtml {
     overflow-x: hidden;
-    overflow-y: hidden;
     position: relative;
     width: 100%;
 }
