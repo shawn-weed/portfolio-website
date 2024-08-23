@@ -10,25 +10,24 @@
     </head>
     <body id='homeBody'>
       {% include 'nav.html'%}
-      <div id='bg' class='container w-100 d-flex align-items-center'>
-            <div id='dev' class='container z-n1 w-75 position-absolute m-4 text-light display-1 overflow-hidden'>
-                from flask import Flask, render_template
-
-                app = Flask(__name__)
-                
-                @app.route("/")
-                def hello_world():
-                    return render_template('home.html')
-                
-                
-                if __name__ == '__main__':
-                    app.run(host='0.0.0.0', port=3000, debug=True)
-            </div>
-            
+      <div id='bg' class='container w-100 d-flex align-items-center'>            
         <div id='mainContainer' class='container d-flex min-vh-100 align-items-center shadow-lg rounded'>
+          <div id='dev' class='position-absolute z-n1 w-75 text-light display-1 overflow-hidden'>
+            from flask import Flask, render_template
+
+            app = Flask(__name__)
+            
+            @app.route("/")
+            def hello_world():
+                return render_template('home.html')
+            
+            
+            if __name__ == '__main__':
+                app.run(host='0.0.0.0', port=3000, debug=True)
+          </div>
         {% block content %}
-          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-n1'/>
-          <div id='textContainer' class='container d-md-flex align-items-end mw-50'>
+          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-0'/>
+          <div id='textContainer' class='position-relative container d-md-flex align-items-end mw-50'>
             <div id='nameContainer' class='container d-flex justify-content-center'>
               <span class='display-4'>Shawn Weed</span>
             </div>
