@@ -1,22 +1,25 @@
 {% extends 'index.html' %}
 {% block content %}
   <div class='container row gap-4 justify-content-center'>
-    <h1 class='text-center display-2'
-    style='font-family: "Lucida Handwriting", cursive;'
+    <h1 class='text-center display-2 fw-bold'
     >
       Projects
     </h1>
-    {%for repo in projects%}    
-        <div class="card bg-transparent" style="width: 18rem;">
-            <div class="card-body">
-            <h5 class="card-title">{{ repo['name'] }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">Description</h6>
-            <p class="card-text">{{ repo['desc']}}</p>
-            <a href="/{{ repo['name'] }}" class="card-link text-secondary">Project Details</a>
-            <a href="{{ repo['url'] }}" target='_blank' class="card-link text-secondary">Code</a>
-            </div>
-        </div>
-    {%endfor%}
+    {%if projects%}
+      {%for repo in projects%}    
+          <div class="card bg-transparent" style="width: 18rem;">
+              <div class="card-body">
+              <h5 class="card-title">{{ repo['name'] }}</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Description</h6>
+              <p class="card-text">{{ repo['desc']}}</p>
+              <a href="/developer/{{ repo['name'] }}" class="card-link text-secondary">Project Details</a>
+              <a href="{{ repo['url'] }}" target='_blank' class="card-link text-secondary">Code</a>
+              </div>
+          </div>
+      {%endfor%}
+    {%else%}
+          <h1 style = 'color: red'>{{ error }}<h1>
+    {%endif%}
   </div>
 
 {% endblock %}

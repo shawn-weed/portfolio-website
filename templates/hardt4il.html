@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{% block content%}
+<div id='projectTitle'>
+  <h1 class='fw-bold'>
+  {% block title %}
+    <a class='text-black' href='https://hardt4il.com'>Hardt4il Website</a>
+  {% endblock title%}
+  <h3>
+    Languages, Libraries, and Technologies
+  </h3>
+  {% block lang %}
+    <ul>
+      <li>Javascript</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>React</li>
+      <li>Express</li>
+      <li>MongoDB</li>
+      <li>Node.js</li>
+      <li>Tailwind React/Flowbite React</li>
+      <li>Google Cloud</li>
+    </ul>
+  {% endblock lang %}
+  </h1>
+    <h3 class='mb-3'><em>
+      Project Overview
+    </h3></em>
+    {% block overview%}
+      <p class='fs-6'>
+        The Hardt4il website is a project I started out of my love for mountain biking.
+        Using the MERN stack and Tailwind for quick CSS and utilities, the site is ready
+        to scale as fast as I need it to. Express is minimalistic and flexible. MongoDB paired
+        with the mongoose library also makes retireiving and storing data a breeze. Lastly, 
+        the addition of Firebase allows for binary storage for media and a nice-to-have OAuth
+        feature. Since I am a one man show running this site with other priorities, I am able 
+        to add new routes/pages quickly without any fuss.
+      </p>
+      <p class='fs-6'>
+        Currently users are able to sign-up for an account which then allows for commenting on articles. 
+        They can set a profile image or use the default "rider in a full face" avatar. For admins there is a 
+        console to create a new post, manage posts, comments, and users. On the media page, the YouTube API 
+        is used to return videos from three different playlist on my YouTube channel.
+      </p>
+      <p class='fs-6'>
+        The design and color scheme is meant to 
+        be simple and easy to navigate. The bold and bright pops of color fit in well 
+        with current trends in the mountain biking scene. Dark and light modes are provided. 
+      </p>
+    {% endblock overview %}
+  <h3><em>
+    Challenges
+  </h3></em>
+  {% block challenges %}
+  <p>
+    This was my first use of Tailwind React and Flowbite React. There was a small learning curve but once
+    I got the hang of it I enjoyed using the library. Flowbite has some great components
+    to use out of the box. I wasn't satsfied with everything about them so I learned to
+    modify the base themes. 
+  </p>
+  <p>
+    My other challenge was also related to styling. Specifically related to video. Getting
+    the videos to fit in an appealing way with the react-youtube player was a lot of trial
+    and error. Scaling the size of the player itself was easy. The video contained in the 
+    player was different. I ended up hard coding the size of the player and creating a layout
+    that worked with that size on all screens. I may come back to this and see if I can accomplish
+    my original layout ideas.
+  </p>
+  {% endblock challenges%}
+</div>
+{% endblock content%}
+

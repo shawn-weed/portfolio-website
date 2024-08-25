@@ -3,7 +3,7 @@
 
 }
 
-button:hover {
+a:hover {
     font-style: italic;
 }
 
@@ -13,6 +13,6 @@ button:hover {
     width: 100%;
 }
 
-#nameContainer, #dv, #create {
+#nameContainer, #dv, #create, #about{
     text-shadow: 1px -1px #fff;
 }

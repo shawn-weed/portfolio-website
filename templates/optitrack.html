@@ -1,0 +1,78 @@
+{% extends 'hardt4il.html' %}
+
+{% block title%}
+    OptiTrack
+{% endblock title%}
+{% block lang %}
+    <ul>
+      <li>Python</li>
+      <li>Flask</li>
+      <li>SQLalchemy</li>
+      <li>LDAP3</li>
+      <li>tkinter</li>
+      <li>ttkbootstrap</li>
+      <li>SQL Server</li>
+      <li>Google Cloud</li>
+    </ul>
+{% endblock lang %}
+{% block overview %}
+<p> This was a fun project. The school district I worked for had over $300,000
+    of Chromebooks that were unaccounted for. This was mostly due to poor asset
+    management and the use of Google Sheets as a way to manage device assignments. 
+    That just doesn't work for 3,000+ students and staff especially when the district
+    averages about 1,000 repair tickets a year for those devices. Once the software 
+    and its use were implemented, there were zero devices that were unaccounted for 
+    at the end of the school year.
+</p>
+<p>
+    My solution was to create a custom tailored desktop application and set up a virtual 
+    server to run the backend. The first
+    iteration was pretty bare bones but it allowed us to assign devices to students
+    or staff and quickly assign a loaner or a totally new device if repairs were
+    needed. I started with a script to import all active Active Directory users daily 
+    into a SQL Server Express instance. The database was not large and there were not many 
+    concurrent users so the load was low. This provided an extremely cost effective 
+    solution to the district. I used the ldap3 library and pandas libraries to accomplish 
+    the import. A simple star schema was used in the database.
+</p>
+<p>
+    The second iteration is where I had a lot of fun. I used the Google Workspace SDK
+    to pull a list of the district devices. I then used SQLalchemy to build some models
+    and manipulate the tables. This allowed automation of importing and keeping good
+    data in the device table. I also implemented a feature to set a flag for devices 
+    in need of repair. This allowed our IT department to quickly add notes and keep 
+    student and staff abreast of repair status. 
+</p>
+<p>
+    Overall I really enjoyed this project and I learned a ton.
+</p>
+{% endblock overview %}
+{% block challenges%}
+<p>
+    My biggest challenge was creating a way to allow users to set their database and 
+    allow for different types of logins and database software. I wanted this to be 
+    available to other districts who did not have a good way of managing their devices.
+    This meant I must set up a configuration file to build out the database with tables
+    if they were not present but not overwrite any data or cause an error. I accomplished
+    this by creating models with SQLalchemy. I built out logic and allowed users to save
+    configuration settings so IT departments could set up the software and set inital 
+    configuratoin but end users just had to login. If they used SQL Server Windows Auth
+    was an option since most districts are using AD.
+
+    The next challenge was keeping an updated count of device assignments and repairs.
+    This wasx not necessary but something I thought was just cool. The problem was if 
+    the function was called to update those, all other processes stopped. I had to use 
+    multithreading to accomplish this. 
+
+    My last major challenge was disabling the app or allowing to keep the connection
+    to the server alive. In the first iteration I noticed users were leaving the app
+    open and receiving errors. An obvious connection timeout was overlooked in my testing.
+    I set a function to run every few minutes to check connection to the server. Once
+    again multithreading came in handy here.
+</p>
+<p>
+    I prefer web applications but this was an interesting project and I believe
+    I learned more from this project than any other becuase I had to build out more
+    functionality on my own.
+</p>
+{% endblock challenges%}

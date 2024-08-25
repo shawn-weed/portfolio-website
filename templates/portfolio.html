@@ -1,0 +1,38 @@
+{% extends 'hardt4il.html' %}
+
+{% block title%}
+    My Portfolio
+{% endblock title%}
+{% block lang %}
+    <ul>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Bootstrap</li>
+      <li>Jinja</li>
+    </ul>
+{% endblock lang %}
+{% block overview %}
+<p> Hey. You're here.
+</p>
+<p>
+    Built on the Flask framework utilizing Bootstrap for a quick and convenient build.
+    I built this for you, person reading this. Hopefully you get to know my work and 
+    see the theme of building effective and scalable applications that fill a need. 
+</p>
+<p>
+    There really isn't a whole lot going on here. The Projects page and cards are built
+    out dynamically by referencing my public repositories on GitHub. 
+</p>
+<p>
+    Simple doesn't have to mean basic and I believe that less is more. 
+</p>
+{% endblock overview %}
+{% block challenges%}
+<p>
+    This is embarrasing but it took me way too long to figure out why my navigation
+    bar wasn't working. Did you know that setting elements on top of the navigation 
+    with z-indexes makes it so you can't click the links? Well I did and I should 
+    have realized it before my frustration kicked in.
+</p>
+{% endblock challenges%}
