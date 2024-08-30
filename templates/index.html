@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id='homeHtml'>
+<html id='homeHtml' data-bs-theme='light'>
     <head>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width,
@@ -15,7 +15,7 @@
       </div>
       <div id='bg' class='container w-100 d-flex align-items-center'>            
         <div id='mainContainer' class='container d-flex min-vh-100 align-items-center shadow-lg rounded'>
-          <div id='dev' class='position-absolute z-n1 w-75 text-light display-1 overflow-hidden'>
+          <div id='dev' class='position-absolute z-n1 h-75 w-75 text-light display-1 overflow-hidden'>
             from flask import Flask, render_template
 
             app = Flask(__name__)
@@ -37,7 +37,7 @@
             <div id='buttonContainer' class='container d-flex justify-content-center gap-5 align-items-end'>
               <a id='dv' href='/developer'  class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Developer</a>
               <h3 class='ml-2 mr-2'> | </h3> 
-              <a id='create' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Creative</a>
+              <a id='create' href='/creative' class='border-0 bg-transparent fs-3 text-decoration-none text-black'>Creative</a>
             </div>
             <h4 id='about' class= 'mt-5 text-center'>Full stack developer with a creative side. Half thrill seeker. Half visual media nerd.
               I build effective and scalable applications.

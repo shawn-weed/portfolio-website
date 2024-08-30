@@ -38,3 +38,7 @@ def optitrack():
 @views.route("developer/portfolio-website")
 def porfolio():
     return render_template('portfolio.html')
+
+@views.route("creative")
+def portfolio():
+    return render_template("creative.html")
