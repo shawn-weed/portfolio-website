@@ -1,14 +1,14 @@
 {% extends 'hardt4il.html' %}
 
 {% block title%}
-    OptiTrack
+    <a href='https://github.com/shawn-weed/OptiTrack' class='text-black'>OptiTrack</a>
 {% endblock title%}
-{% block lang %}
+    {% block lang %}
     <ul>
       <li>Python</li>
       <li>Flask</li>
       <li>SQLalchemy</li>
-      <li>LDAP3</li>
+      <li>ldap3</li>
       <li>tkinter</li>
       <li>ttkbootstrap</li>
       <li>SQL Server</li>
@@ -32,7 +32,7 @@
     needed. I started with a script to import all active Active Directory users daily 
     into a SQL Server Express instance. The database was not large and there were not many 
     concurrent users so the load was low. This provided an extremely cost effective 
-    solution to the district. I used the ldap3 library and pandas libraries to accomplish 
+    solution to the district. I used the ldap3 and pandas libraries to accomplish 
     the import. A simple star schema was used in the database.
 </p>
 <p>
@@ -42,9 +42,6 @@
     data in the device table. I also implemented a feature to set a flag for devices 
     in need of repair. This allowed our IT department to quickly add notes and keep 
     student and staff abreast of repair status. 
-</p>
-<p>
-    Overall I really enjoyed this project and I learned a ton.
 </p>
 {% endblock overview %}
 {% block challenges%}
@@ -56,16 +53,17 @@
     if they were not present but not overwrite any data or cause an error. I accomplished
     this by creating models with SQLalchemy. I built out logic and allowed users to save
     configuration settings so IT departments could set up the software and set inital 
-    configuratoin but end users just had to login. If they used SQL Server Windows Auth
+    configuration but end users just had to login. If they used SQL Server Windows Auth
     was an option since most districts are using AD.
-
+</p>
+<p>
     The next challenge was keeping an updated count of device assignments and repairs.
-    This wasx not necessary but something I thought was just cool. The problem was if 
+    This was not necessary but something I thought was just cool. The problem was if 
     the function was called to update those, all other processes stopped. I had to use 
     multithreading to accomplish this. 
-
+<p>
     My last major challenge was disabling the app or allowing to keep the connection
-    to the server alive. In the first iteration I noticed users were leaving the app
+    to the server alive if the server connection was close to timing out. In the first iteration I noticed users were leaving the app
     open and receiving errors. An obvious connection timeout was overlooked in my testing.
     I set a function to run every few minutes to check connection to the server. Once
     again multithreading came in handy here.
@@ -76,3 +74,10 @@
     functionality on my own.
 </p>
 {% endblock challenges%}
+{% block images %}
+    <img class='img-thumbnail'  src='/static/images/320489768-0c513911-b0f0-4d36-8c97-06b917ec98d4.png'/>
+    <img class='img-thumbnail' src='/static/images/320489766-1db258e8-3810-41a5-922e-f2ace39a3447.png'/>
+    <img class='img-thumbnail'  src='/static/images/320489764-8d2d594b-4b41-49da-9a5f-945ebb7baea1.png'/>
+
+
+    {% endblock images %}
