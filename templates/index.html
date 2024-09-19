@@ -15,7 +15,7 @@
       </div>
       <div id='bg' class='container w-100 d-flex align-items-center'>            
         <div id='mainContainer' class='container d-flex min-vh-100 align-items-center shadow-lg rounded'>
-          <div id='dev' class='position-absolute z-n1 h-75 w-75 text-light display-1 overflow-hidden'>
+          <div id='dev' class='position-absolute z-n1 h-75 w-75 text-light display-1 overflow-hidden text-center'>
             from flask import Flask, render_template
 
             app = Flask(__name__)
@@ -29,7 +29,7 @@
                 app.run(host='0.0.0.0', port=3000, debug=True)
           </div>
         {% block content %}
-          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-0'/>
+          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-0 opacity-50'/>
           <div id='textContainer' class='position-relative container align-items-end mw-50'>
             <div id='nameContainer' class='container d-flex justify-content-center'>
               <span class='display-4'>Shawn Weed</span>
