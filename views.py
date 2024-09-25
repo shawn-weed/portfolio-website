@@ -41,7 +41,7 @@ def porfolio():
     return render_template('portfolio.html')
 
 @views.route("creative")
-def portfolio():
+def creative():
     return render_template("creative.html")
 
 @views.route('creative/photography')
