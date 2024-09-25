@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content%}
+<div>
+  <div class='row align-items-start text-center'>
+    <h1 class='mt-4 mb-4'>Action Sports</h1>
+    {% for i in action %}
+      <div class = 'col-sm-12 col-md-4'>
+        <img class = 'img-fluid mt-2 mb-2' src="../static/images/action/{{i}}" />
+      </div>
+    {% endfor %}
+    <h1 class='mt-4 mb-4'>Products</h1>
+    {% for i in products %}
+      <div class = 'col-sm-12 col-md-4'>
+        <img class = 'img-fluid mt-2 mb-2' style='width: 600px' src="../static/images/products/{{i}}" />
+      </div>
+    {% endfor %}
+  </div>  
+</div>
+{% endblock content %}

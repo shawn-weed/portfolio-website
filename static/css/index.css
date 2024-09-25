@@ -16,25 +16,3 @@ a:hover {
 #nameContainer, #dv, #create, #about{
     text-shadow: 1px -1px #fff;
 }
-
-#diamond {
-    width: 100px;
-    height: 100px;
-    border-style: solid;
-    border-color: gray;
-    margin: 25px;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    overflow: hidden;
-  }
-  #k1000 {
-    width: 150px;
-    height: 150px;
-    margin: -25px;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  

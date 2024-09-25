@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template
 import requests
+import os
 
 views = Blueprint(__name__, 'views')
 
@@ -42,3 +43,17 @@ def porfolio():
 @views.route("creative")
 def portfolio():
     return render_template("creative.html")
+
+@views.route('creative/photography')
+def photography():
+    action = []
+    action_dir = './static/images/action'
+    for image in os.listdir(action_dir):
+        action.append(image)
+    
+    products = []
+    products_dir = './static/images/products'
+    for i in os.listdir(products_dir):
+        products.append(i)
+    print(action[0])
+    return render_template('photography.html', action=action, products=products)
