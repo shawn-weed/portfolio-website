@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% block content %}
   <div class='container row gap-4 justify-content-center'>
-    <h1 class='text-center display-2 fw-bold'
+    <h1 class='text-center display-2 fw-bold mt-4'
     >
       Projects
     </h1>
@@ -11,7 +11,7 @@
     </h3>
     {%if projects%}
       {%for repo in projects%}    
-          <div class="card bg-transparent" style="width: 18rem;">
+          <div class="card bg-transparent mb-2" style="width: 18rem;">
               <div class="card-body">
               <h5 class="card-title">{{ repo['name'] }}</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Description</h6>
@@ -23,6 +23,7 @@
       {%endfor%}
     {%else%}
           <h1 style = 'color: red'>{{ error }}<h1>
+          <h2>Unable to retrieve repositories</h2>
     {%endif%}
   </div>
 
