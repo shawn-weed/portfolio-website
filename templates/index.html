@@ -9,7 +9,7 @@
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="{{url_for('static', filename='./css/index.css')}}" />
         <script src="https://kit.fontawesome.com/bc5246f376.js" crossorigin="anonymous"></script>
-    </head>
+      </head>
     <body id='homeBody'>
       <div class='position-relative z-2'>
         {% include 'nav.html'%}
@@ -36,5 +36,6 @@
       </div>
       {% include 'footer.html'%}
       <script src="{{url_for('static', filename='./scripts/themeSelector.js')}}"></script>
+      <script src="{{url_for('static', filename='./scripts/lightbox.js')}}"></script>
     </body>
 </html>
