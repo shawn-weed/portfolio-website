@@ -8,11 +8,6 @@ images.forEach(image => {
         lightbox.classList.add('active')
         const img = document.createElement('img')
         img.src = image.src
-        img.onload = function(){
-            if (img.height > img.width) {
-                img.classList.add('active')
-            }
-        }
         while (lightbox.firstChild) {
             lightbox.removeChild(lightbox.firstChild)
         }

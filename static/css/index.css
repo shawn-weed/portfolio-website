@@ -76,11 +76,9 @@ a:hover {
 }
 
 #lightbox img {
-    width: 75vw;
-    height: auto;
-}
-
-#lightbox img.active {
-    width: auto;
-    height: 90vh;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
 }
