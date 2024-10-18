@@ -2,19 +2,53 @@
 
 {% block content%}
 <div>
-  <div class='row align-items-start text-center'>
+  <div class='row align-items-start text-center g-2 mb-2'>
     <h1 class='mt-4 mb-4'>Action Sports</h1>
-    {% for i in action %}
-      <div class = 'col-sm-12 col-md-4'>
-        <img class = 'img-fluid mt-2 mb-2' src="../static/images/action/{{i}}" />
+    <div class = 'col-sm-12 col-md-4'>
+    {% for i in actionImgCol1 %}
+      <div class = "vstack">
+        <img class = 'img-fluid mt-2' src="../static/images/action/{{i}}" />
       </div>
     {% endfor %}
+    </div>
+    <div class = 'col-sm-12 col-md-4 '>
+    {% for i in actionImgCol2 %}
+      <div class = "vstack">
+        <img class = 'img-fluid mt-2' src="../static/images/action/{{i}}" />
+      </div>
+    {% endfor %}
+    </div>
+    <div class = 'col-sm-12 col-md-4'>
+      {% for i in actionImgCol3 %}
+        <div class = "vstack">
+          <img class = 'img-fluid mt-2' src="../static/images/action/{{i}}" />
+        </div>
+      {% endfor %}
+      </div>
+  </div>
+  <div class='row align-items-start text-center g-2 mb-2'>
     <h1 class='mt-4 mb-4'>Products</h1>
-    {% for i in products %}
-      <div class = 'col-sm-12 col-md-4'>
-        <img class = 'img-fluid mt-2 mb-2' style='width: 600px' src="../static/images/products/{{i}}" />
+    <div class = 'col-sm-12 col-md-4'>
+    {% for i in productsImgCol1 %}
+      <div class = "vstack">
+        <img class = 'img-fluid mt-2' src="../static/images/products/{{i}}" />
       </div>
     {% endfor %}
+    </div>
+    <div class = 'col-sm-12 col-md-4'>
+    {% for i in productsImgCol2 %}
+      <div class = "vstack">
+        <img class = 'img-fluid mt-2' src="../static/images/products/{{i}}" />
+      </div>
+    {% endfor %}
+    </div>
+    <div class = 'col-sm-12 col-md-4'>
+      {% for i in productsImgCol3 %}
+        <div class = "vstack">
+          <img class = 'img-fluid mt-2' src="../static/images/products/{{i}}" />
+        </div>
+      {% endfor %}
+      </div>
   </div>  
 </div>
 {% endblock content %}

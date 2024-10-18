@@ -46,14 +46,40 @@ def creative():
 
 @views.route('creative/photography')
 def photography():
-    action = []
     action_dir = './static/images/action'
-    for image in os.listdir(action_dir):
-        action.append(image)
+    action = os.listdir(action_dir)
+
+    actionCol1 = action[::3]
+    actionImgCol1 = []
+    for i in actionCol1:
+        actionImgCol1.append(i)
+
+    actionCol2 = action[1::3]
+    actionImgCol2 = []
+    for i in actionCol2:
+        actionImgCol2.append(i)
+
+    actionCol3 = action[2::3]
+    actionImgCol3 = []
+    for i in actionCol3:
+        actionImgCol3.append(i)
     
-    products = []
     products_dir = './static/images/products'
-    for i in os.listdir(products_dir):
-        products.append(i)
-    print(action[0])
-    return render_template('photography.html', action=action, products=products)
+    products = os.listdir(products_dir)
+
+    productsCol1 = products[::3]
+    productsImgCol1 = []
+    for i in productsCol1:
+        productsImgCol1.append(i)
+
+    productsCol2 = products[1::3]
+    productsImgCol2 = []
+    for i in productsCol2:
+        productsImgCol2.append(i)
+
+    productsCol3 = products[2::3]
+    productsImgCol3 = []
+    for i in productsCol3:
+        productsImgCol3.append(i)
+
+    return render_template('photography.html', actionImgCol1=actionImgCol1, actionImgCol2=actionImgCol2, actionImgCol3=actionImgCol3, productsImgCol1=productsImgCol1, productsImgCol2=productsImgCol2, productsImgCol3=productsImgCol3)

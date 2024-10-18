@@ -13,9 +13,9 @@ a:hover {
     width: 100%;
 }
 
-#nameContainer, #dv, #create, #about{
-    text-shadow: 1px -1px #fff;
-}
+/* #nameContainer, #dv, #create, #about{
+    text-shadow: 1px -1px;
+} */
 
 .checkbox {
     opacity:0;
