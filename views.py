@@ -17,7 +17,7 @@ def developer():
         projects = []
         if r.status_code == 200:
             response = r.json()
-            print(r)
+            print(response)
             for i in response:
                 projects.append({'name': i['name'], 'desc': i['description'], 'url': i['html_url']})
             return render_template("developer.html", projects=projects)
