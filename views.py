@@ -40,6 +40,10 @@ def optitrack():
 def porfolio():
     return render_template('portfolio.html')
 
+@views.route("developer/Barcodes")
+def barcodes():
+    return render_template('barcodes.html')
+
 @views.route("creative")
 def creative():
     return render_template("creative.html")

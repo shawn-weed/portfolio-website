@@ -1,0 +1,35 @@
+{% extends 'hardt4il.html' %}
+
+{% block title%}
+    <a href='https://github.com/shawn-weed/OptiTrack' class='text-black'>Barcodes</a>
+{% endblock title%}
+    {% block lang %}
+    <ul>
+      <li>Python</li>
+      <li>pandas</li>
+      <li>zpl</li>
+    </ul>
+{% endblock lang %}
+{% block overview %}
+<p> 
+    This project was my solution to keeping accountability of Chromebook Chargers. The customer
+    was spending too much replacing chargers for student devices. My solution was to create our 
+    own labels with qrcodes. This made it easier to keep accountability of the chargers
+    and hold students accountable for their chargers.
+</p>
+<p>
+    The program uses pandas to load CSVs from our asset management system to aquire the 
+    serial number of school devices. I used a simple join to seperate devices by homeroom 
+    since these devices are assigned to students. This allowed staff to go to homeroom classes 
+    and efficiently apply the labels. 
+</p>
+{% endblock overview %}
+{% block challenges%}
+<p>
+    In this case, programming was the easy part. Finding a solution and selling my programmatic 
+    way was the challenge. The initial thought was they would be handed a roll of labels and have 
+    to spend time tracking down students to apply the labels. My program took care of their concerns. 
+</p>
+{% endblock challenges%}
+{% block images %}
+{% endblock images %}
