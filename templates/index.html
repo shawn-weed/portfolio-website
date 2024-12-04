@@ -11,14 +11,14 @@
         <script src="https://kit.fontawesome.com/bc5246f376.js" crossorigin="anonymous"></script>
       </head>
     <body id='homeBody'>
-      <div class='position-relative z-2'>
+      <div id='page' class='position-relative z-2'>
         {% include 'nav.html'%}
       </div>
-      <div id='bg' class='container bg-secondary bg-opacity-25 w-100 d-flex align-items-center'>            
+      <div id='bg' class='container w-100 d-flex align-items-center'>            
         <div id='mainContainer' class='container d-flex min-vh-100 align-items-center shadow-lg rounded'>
-        {% block content %}
-          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-0 opacity-50'/>
-          <div id='textContainer' class='position-relative container align-items-end mw-50'>
+          {% block content %}
+          <img id='me' src='static/images/_DSC1291-Edit.png' class='position-absolute align-self-end h-100 z-0 opacity-75'/>
+          <div id='textContainer' class='position-relative container align-items-center mw-50'>
             <div id='nameContainer' class='container d-flex justify-content-center'>
               <span class='display-4'>Shawn Weed</span>
             </div>
