@@ -32,6 +32,10 @@ def developer():
 def hardt4il():
     return render_template('hardt4il.html')
 
+@views.route('developer/OpenTechManagement')
+def tech():
+    return render_template('techmanagement.html')
+
 @views.route("developer/OptiTrack")
 def optitrack():
     return render_template('optitrack.html')

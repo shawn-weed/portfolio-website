@@ -1,0 +1,38 @@
+{% extends 'hardt4il.html' %}
+
+{% block title%}
+    <a href='https://github.com/shawn-weed/OpenTechManagement' class='text-black'>Tech Management</a>
+    <h1>This is an unfinished and ongoing project</h1>
+{% endblock title%}
+    {% block lang %}
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+      <li>SQL</li>
+      <li>React</li>
+      <li>TailwindCSS</li>
+      <li>Flowbite</li>
+      <li>Django Rest Framework</li>
+    </ul>
+{% endblock lang %}
+{% block overview %}
+<p> The client I work for wanted a wiki to quickly search for and find useful tech info or notes on issues that the department has come across.
+    I took this as an opportunity to combine some features of my asset management software into a web application and plan to add a chat as well
+    to help aid the IT department in providing exceptional response time to issues that arise through the district. 
+</p>
+<p>
+    I used React for the front end as it provides a great framework for setting up and seperating the apps. It allows me to write clean code
+    and only provide the portions of the system that are needed. Django was used for the back end becasuse it seamlessly allows integration into 
+    most database software but also provides SQLite as a free and lightweight tool for smaller districts who want to keep cost down. 
+</p>
+{% endblock overview %}
+{% block challenges%}
+<p>
+    With any project, comes challenges. Mostly for this project it was ensuring that the front and backend worked well together while keeping code clean
+    to allow easy modification. This will allow IT departments with little programming knowledge to customize the application to their needs
+    if they see fit. Django REST framework makes this easy with Serializers. This allows for an easy way to conduct CRUD operations with
+    the React frontend.
+</p>
+{% endblock challenges%}
+{% block images %}
+{% endblock images %}
