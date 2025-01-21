@@ -32,9 +32,9 @@ def developer():
 def hardt4il():
     return render_template('hardt4il.html')
 
-@views.route('developer/OpenTechManagement')
+@views.route('developer/Toaster')
 def tech():
-    return render_template('techmanagement.html')
+    return render_template('toaster.html')
 
 @views.route("developer/OptiTrack")
 def optitrack():
